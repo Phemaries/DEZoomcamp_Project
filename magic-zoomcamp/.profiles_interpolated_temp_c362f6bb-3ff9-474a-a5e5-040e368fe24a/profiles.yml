@@ -1,0 +1,14 @@
+demo:
+  outputs:
+    dev:
+      dataset: airline_transport
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /home/src/mageai-416110-2fc5ab7f91a6.json
+      location: US
+      method: service-account
+      priority: interactive
+      project: mageai-416110
+      threads: 4
+      type: bigquery
+  target: dev

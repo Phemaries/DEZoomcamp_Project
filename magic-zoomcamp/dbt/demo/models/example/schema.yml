@@ -1,0 +1,52 @@
+
+version: 2
+
+
+sources:
+  - name: demo
+    tables:
+      - name: external_airline_months
+      
+
+# models:
+#   - name: titanic
+#     description: "A starter dbt model"
+#     columns:
+#           - name: occurence
+#             description: Relative search interest the 'AI' keyword in the US 
+#             tests: 
+#               - not_null
+#           - name: age
+#             description: Relative search interest the 'ChatGPT' keyword in the US 
+#             tests: 
+#               - not_null
+#           - name: fare
+#             description: Relative search interest the 'AI' keyword in India 
+#             tests: 
+#               - not_null
+#           - name: parch
+#             description: Relative search interest the 'ChatGPT' keyword in India
+#             tests: 
+#               - not_null
+#           - name: pclass
+#             description: Relative search interest the 'ChatGPT' keyword in India
+#             tests: 
+#               - not_null
+          # - name: sibsp
+          #   description: Relative search interest the 'ChatGPT' keyword in India
+          #   tests: 
+          #     - not_null
+          # - name: survived
+          #   description: Relative search interest the 'ChatGPT' keyword in India
+          #   tests: 
+          #     - not_null
+
+
+  # - name: my_second_dbt_model
+  #   description: "A starter dbt model"
+  #   columns:
+  #     - name: id
+  #       description: "The primary key for this table"
+  #       tests:
+  #         - unique
+  #         - not_null

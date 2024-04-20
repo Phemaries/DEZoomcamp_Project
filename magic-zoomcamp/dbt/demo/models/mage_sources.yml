@@ -1,0 +1,21 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_demo
+  schema: airline_transport
+  tables:
+  - description: Dataframe for block `load_gcs_bigquery` of the `project_gcs_to_bigquery`
+      mage pipeline.
+    identifier: mage_project_gcs_to_bigquery_load_gcs_bigquery
+    meta:
+      block_uuid: load_gcs_bigquery
+      pipeline_uuid: project_gcs_to_bigquery
+    name: project_gcs_to_bigquery_load_gcs_bigquery
+  - description: Dataframe for block `load_gcs_bigquery` of the `project_bigquery_to_dbt`
+      mage pipeline.
+    identifier: mage_project_bigquery_to_dbt_load_gcs_bigquery
+    meta:
+      block_uuid: load_gcs_bigquery
+      pipeline_uuid: project_bigquery_to_dbt
+    name: project_bigquery_to_dbt_load_gcs_bigquery
+version: 2
