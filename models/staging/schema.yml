@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: mageai-416110
+    schema: airline_transport
+
+    tables:
+      - name: airline_transport_2020
+      # - name: traffic_data
