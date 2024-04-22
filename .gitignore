@@ -1,3 +1,5 @@
+postBuffer = 999999999
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
