@@ -10,7 +10,7 @@
         when 5 then 'Friday'
         when 6 then 'Saturday'
         when 7 then 'Sunday'
-        else 'No Data'
+        else 'No record'
     end
 
 {% endmacro %}
