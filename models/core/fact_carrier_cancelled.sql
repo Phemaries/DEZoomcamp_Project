@@ -14,15 +14,31 @@ carrier as (
         travel_id,
         unique_carrier
     from {{ref('stg_airline_carrier')}}
+),
+combined_data as (
+    select
+        cancelled_trip.travel_id,
+        cancelled_trip.travel_day,
+        cancelled_trip.travel_month,
+        cancelled_trip.cancelled,
+        cancelled_trip.cancellation_code,
+        carrier.unique_carrier
+    from cancelled_trip
+    left join carrier 
+        on cancelled_trip.travel_id = carrier.travel_id
+),
+unique_source as (
+    select *,
+        row_number() over (partition by travel_id, unique_carrier order by travel_id) as rn
+    from combined_data
 )
-select
-     {{ dbt_utils.generate_surrogate_key(['cancelled_trip.travel_id', 'carrier.unique_carrier']) }} as unique_id,
-     cancelled_trip.travel_day,
-     cancelled_trip.travel_month,
-     cancelled_trip.cancelled,
-     cancelled_trip.cancellation_code,
-     carrier.unique_carrier
-from cancelled_trip
-left join carrier 
-on cancelled_trip.travel_id = carrier.travel_id
-where carrier.unique_carrier is not null
+select 
+    {{ dbt_utils.generate_surrogate_key(['travel_id', 'unique_carrier']) }} as unique_id,
+    travel_id,
+    travel_day,
+    travel_month,
+    cancelled,
+    cancellation_code,
+    unique_carrier
+from unique_source
+where rn = 1
