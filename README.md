@@ -21,3 +21,7 @@ The following tools were used for this project:
 ## Problem Description
 I analyzed the impact of COVID-19 on flight delays and cancellations during the peak eras of the virus with available datasets from January to June 2020. By understanding the root causes of delays and cancellations, airlines can implement strategies to minimize their impact on customer satisfaction and operational performance.
 
+## Data Visualization
+![Data Architecture](img/US_Airline_Cancelled_Looker-1.png)
+![Data Architecture](img/US_Airline_Delays_Looker-1.png)
+![Data Architecture](img/US_Airline_Delays_Looker-2.png)
