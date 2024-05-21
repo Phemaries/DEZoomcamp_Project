@@ -1,6 +1,6 @@
 ## Analysis of Flight Delays and Cancellation during COVID-19 in United States
 
-Analyzing flight delay and cancellation metrics can provide insights into the factors contributing to disruptions in airline operations. The data set is provided by The United States Department of Transportation's (DOT) Bureau of Transportation Statistics tracks on the on-time performance of domestic flights operated by large air carriers. The data collected is from January - June 2020. The data set was sourced [here](https://www.kaggle.com/datasets/akulbahl/covid19-airline-flight-delays-and-cancellations/data?select=jantojun2020.csv)
+Analyzing flight delay and cancellation metrics can provide insights into the factors contributing to disruptions in airline operations. The dataset is provided by The United States Department of Transportation's (DOT) Bureau of Transportation Statistics tracks on the on-time performance of domestic flights operated by large air carriers. The data collected is from January - June 2020. The data set was sourced [here](https://www.kaggle.com/datasets/akulbahl/covid19-airline-flight-delays-and-cancellations/data?select=jantojun2020.csv)
 
 ## Used Technologies
 
@@ -19,7 +19,7 @@ I analyzed the impact of COVID-19 on flight delays and cancellations during the 
 
 
 ## Data Warehouse
-Kimball's approach to data engineering was implemented based on the concepts of dimensional modeling and the star schema. The data was structured into fact and dimensional tables
+Kimball's approach to data engineering was implemented based on the concepts of dimensional modeling and the star schema. The data was structured into fact and dimensional tables. kindly go to https://github.com/Phemaries/DEZoomcamp_Project/tree/Phemaries-patch-1 for dbt codes
 
 ![Schema](img/US_Transport_Schema.jpg)
 
