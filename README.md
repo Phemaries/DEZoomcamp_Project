@@ -2,86 +2,22 @@
 <img src="https://github.com/mage-ai/assets/blob/main/mascots/mascots-shorter.jpeg?raw=true">
 </div>
 
-## Data Engineering Zoomcamp - Week 2
+## Analysis of Flight Delays and Cancellation during COVID-19 in United States
 
-Welcome to DE Zoomcamp with Mage! 
+Analyzing flight delay and cancellation metrics can provide insights into the factors contributing to disruptions in airline operations. The data set is provided by The United States Department of Transportation's (DOT) Bureau of Transportation Statistics tracks on the on-time performance of domestic flights operated by large air carriers. The data collected is from January - June 2020. The data set was sourced [here](https://www.kaggle.com/datasets/akulbahl/covid19-airline-flight-delays-and-cancellations/data?select=jantojun2020.csv)
 
-Mage is an open-source, hybrid framework for transforming and integrating data. ✨
+## Used Technologies
 
-In this module, you'll learn how to use the Mage platform to author and share _magical_ data pipelines. This will all be covered in the course, but if you'd like to learn a bit more about Mage, check out our docs [here](https://docs.mage.ai/introduction/overview). 
+The following tools were used for this project:
+- Docker - for Containerization
+- Mage.ai - for orchestration;
+- Google Cloud Storage (GCS) - for storage as Data Lake;
+- Google BigQuery - for the project Data Warehouse;
+- dbt - for the transformation of raw data into refined data (staging and core);
+- Google Looker studio - for visualizations.
 
-[Get Started](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#lets-get-started)
-[Assistance](https://github.com/mage-ai/mage-zoomcamp?tab=readme-ov-file#assistance)
+![Data Architecture](img/Slide1/PNG)
 
-## Let's get started
+## Problem Description
+I analyzed the impact of COVID-19 on flight delays and cancellations during the peak eras of the virus with available datasets from January to June 2020. By understanding the root causes of delays and cancellations, airlines can implement strategies to minimize their impact on customer satisfaction and operational performance.
 
-This repo contains a Docker Compose template for getting started with a new Mage project. It requires Docker to be installed locally. If Docker is not installed, please follow the instructions [here](https://docs.docker.com/get-docker/). 
-
-You can start by cloning the repo:
-
-```bash
-git clone https://github.com/mage-ai/mage-zoomcamp.git mage-zoomcamp
-```
-
-Navigate to the repo:
-
-```bash
-cd mage-data-engineering-zoomcamp
-```
-
-Rename `dev.env` to simply `.env`— this will _ensure_ the file is not committed to Git by accident, since it _will_ contain credentials in the future.
-
-Now, let's build the container
-
-```bash
-docker compose build
-```
-
-Finally, start the Docker container:
-
-```bash
-docker compose up
-```
-
-Now, navigate to http://localhost:6789 in your browser! Voila! You're ready to get started with the course. 
-
-### What just happened?
-
-We just initialized a new mage repository. It will be present in your project under the name `magic-zoomcamp`. If you changed the varable `PROJECT_NAME` in the `.env` file, it will be named whatever you set it to.
-
-This repository should have the following structure:
-
-```
-.
-├── mage_data
-│   └── magic-zoomcamp
-├── magic-zoomcamp
-│   ├── __pycache__
-│   ├── charts
-│   ├── custom
-│   ├── data_exporters
-│   ├── data_loaders
-│   ├── dbt
-│   ├── extensions
-│   ├── interactions
-│   ├── pipelines
-│   ├── scratchpads
-│   ├── transformers
-│   ├── utils
-│   ├── __init__.py
-│   ├── io_config.yaml
-│   ├── metadata.yaml
-│   └── requirements.txt
-├── Dockerfile
-├── README.md
-├── dev.env
-├── docker-compose.yml
-└── requirements.txt
-```
-
-## Assistance
-
-1. [Mage Docs](https://docs.mage.ai/introduction/overview): a good place to understand Mage functionality or concepts.
-2. [Mage Slack](https://www.mage.ai/chat): a good place to ask questions or get help from the Mage team.
-3. [DTC Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_2_workflow_orchestration): a good place to get help from the community on course-specific inquireies.
-4. [Mage GitHub](https://github.com/mage-ai/mage-ai): a good place to open issues or feature requests.
